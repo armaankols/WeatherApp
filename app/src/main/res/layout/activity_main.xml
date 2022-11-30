@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/lightBlue">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Austin"
+        android:textAlignment="viewEnd"
+        android:textColor="#3F51B5"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="160dp"
+        android:layout_height="87dp"
+        android:text="32°"
+        android:textColor="#3F51B5"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Now in"
+        android:textColor="#3F51B5"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:alpha="0.5"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="337dp"
+        android:layout_height="252dp"
+        android:background="@color/light"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.721">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd1"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt1"
+                    android:layout_width="154dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="82.4°   32.0°"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="19.2"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt2"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt3"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt4"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt5"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt6"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewd7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewt7"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:text="Today"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/hum7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="serif"
+                    android:textSize="20sp" />
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="352dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="94dp"
+        android:background="@color/light"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewh0"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh5"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh6"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh7"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh8"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh9"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh10"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh11"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh12"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh13"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh14"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh15"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh16"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh17"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh18"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh19"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh20"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh21"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh22"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewh23"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewf0"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf5"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf6"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf7"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf8"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf9"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf10"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf11"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf12"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf13"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf14"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf15"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf16"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf17"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf18"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf19"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf20"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf21"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf22"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewf23"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewp0"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp5"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp6"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp7"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp8"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp9"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp10"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp11"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp12"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp13"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp14"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp15"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp16"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp17"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp18"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp19"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp20"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp21"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp22"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewp23"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" High       Low"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind (mph)"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="92dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/ic_baseline_wb_sunny_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
