@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Integer month = Integer.valueOf(dateAndTime.substring(5,7));
         Integer day = Integer.valueOf(dateAndTime.substring(8,10));
 
-        ImageView iv = (ImageView) findViewById(R.id.imageView);
-        iv.setImageResource(R.drawable.ic_baseline_cloud_24);
+
 //        textView = (TextView)findViewById(R.id.textViewd1);
 //        textView.setText(month.toString() + "/" + (day).toString());
         day++;
@@ -129,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.textViewh23);
         textView.setText(i.toString() + ":00"); i++; if (i > 23) i = 0;
 
-        volleyRequest();
+        volleyRequest("30.27", "-97.74");
 
 //        Button helloButton = (Button)findViewById(R.id.button2); //comes thru R object
 //        helloButton.setOnClickListener(new View.OnClickListener() { //creating listener
@@ -157,34 +156,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void okButtonTap(View view){
-//        Button okButton = (Button) view;
-//        okButton.setText("Tapped!");
-//
-//        Log.i("UI Event Handler", "The OK button was tapped");
-//
-//        EditText editTextObject = (EditText) findViewById(R.id.editText1);
-//        TextView helloWorld = (TextView) findViewById(R.id.textView);
-//
-//        helloWorld.setText(editTextObject.getText());
-        TextView helloWorld = (TextView) findViewById(R.id.textView);
-        String in = helloWorld.getText().toString();
-
-        try {
-            JSONObject reader = new JSONObject(in);
-            JSONObject hourly = reader.getJSONObject("hourly");
-            JSONArray time = hourly.getJSONArray("time");
-            JSONArray temp = hourly.getJSONArray("temperature_2m");
-            helloWorld.setText("aaa");
-                    //Double.toString(temp.getDouble(0)));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        EditText lat = (EditText) findViewById(R.id.editLat);
+        EditText lon = (EditText) findViewById(R.id.editLong);
+        volleyRequest(lat.getText().toString(), lon.getText().toString());
+        TextView city = (TextView) findViewById(R.id.textView2);
+        city.setText("Custom");
     }
 
-    private void volleyRequest(){
+    private void volleyRequest(String lat, String lon){
         final TextView textView = (TextView) findViewById(R.id.textView);   // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://api.open-meteo.com/v1/forecast?latitude=30.27&longitude=-97.74&hourly=temperature_2m,relativehumidity_2m,precipitation,windspeed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&temperature_unit=fahrenheit&timezone=America%2FChicago";
+        String begin = "https://api.open-meteo.com/v1/forecast?latitude=";
+        String middle = "&longitude=";
+        String end = "&hourly=temperature_2m,relativehumidity_2m,precipitation,weathercode,windspeed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&temperature_unit=fahrenheit&timezone=America%2FChicago";
+        String url = begin + lat + middle + lon + end;
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -201,13 +186,22 @@ public class MainActivity extends AppCompatActivity {
                     high = daily.getJSONArray("temperature_2m_max");
                     low = daily.getJSONArray("temperature_2m_min");
                     JSONArray wind = daily.getJSONArray("windspeed_10m_max");
-
                     //helloWorld.setText("Hello");
                     //Double.toString(temp.getDouble(0)));
 //                    textView.setText(time.getString(15) + "  " + Double.toString(temp.getDouble(15))
 //                            + "  " + Double.toString(high.getDouble(0)) + "  " + Double.toString(low.getDouble(0)));\
-                    String currTemp = Integer.toString((int)temp.getDouble(Integer.valueOf(dateAndTime.substring(17,19))));
+                    Integer h = Integer.valueOf(dateAndTime.substring(17,19));
+                    String currTemp = Integer.toString((int)temp.getDouble(h));
                     textView.setText(currTemp + "°");
+
+                    JSONArray cloud = hourly.getJSONArray("weathercode");
+                    ImageView iv = (ImageView) findViewById(R.id.imageView);
+                    if (cloud.getInt(h) != 0) {
+                        iv.setImageResource(R.drawable.ic_baseline_cloud_24);
+                    }
+                    else {
+                        iv.setImageResource(R.drawable.ic_baseline_wb_sunny_24);
+                    }
 
                     int i = 0;
                     TextView temps = (TextView) findViewById(R.id.textViewt1);
