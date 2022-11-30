@@ -18,7 +18,7 @@
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
@@ -32,7 +32,7 @@
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintHorizontal_bias="0.90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.009" />
@@ -47,7 +47,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034" />
@@ -59,7 +59,7 @@
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
@@ -340,7 +340,7 @@
                 <TextView
                     android:id="@+id/textViewh0"
                     android:layout_width="65dp"
-                    android:layout_height="25dp"
+                    android:layout_height="32dp"
                     android:text="Now"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -965,7 +965,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16"
+        app:layout_constraintVertical_bias="0.171"
         app:srcCompat="@drawable/ic_baseline_wb_sunny_24" />
 
     <EditText
@@ -978,7 +978,7 @@
         android:ems="10"
         android:fontFamily="serif"
         android:inputType="textPersonName"
-        android:text=" Enter Latitude"
+        android:hint=" Enter Latitude"
         android:textColor="@android:color/secondary_text_light"
         android:textSize="14sp"
         android:typeface="normal"
@@ -999,7 +999,7 @@
         android:ems="10"
         android:fontFamily="serif"
         android:inputType="textPersonName"
-        android:text=" Enter Longitude"
+        android:hint=" Enter Longitude"
         android:textColor="@android:color/secondary_text_light"
         android:textSize="14sp"
         android:typeface="normal"
