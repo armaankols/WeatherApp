@@ -175,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 // Display the first 500 characters of the response string.
-                TextView helloWorld = (TextView) findViewById(R.id.textView);
                 try {
                     JSONObject reader = new JSONObject(response);
                     JSONObject hourly = reader.getJSONObject("hourly");
